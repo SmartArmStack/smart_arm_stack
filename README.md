@@ -1,22 +1,33 @@
-# SmartArmStack (LGPLv3 packages)
+# SmartArmStack
 
-This repository contains all [LGPLv3](https://tldrlegal.com/license/gnu-lesser-general-public-license-v3-(lgpl-3)) packages related to the [SmartArm](http://doi.org/10.1002/rcs.2053) development.
+
 
 The current version of the packages are compatible with `ROS Noetic` in `Ubuntu 20.04 Focal`.
 
-## Installation and updates
-The only supported strategy is to download the latest `.deb` files and install them in your system.
+## Installation
 
-You can download them manually at the [Releases](https://github.com/SmartArmStack/smart_arm_stack/releases) page.
+### Dependencies
 
-To do it on the command line, you might do:
+- [DQRobotics](https://github.com/dqrobotics/cpp/)
+```sh
+sudo add-apt-repository ppa:dqrobotics-dev/development
+sudo apt-get update
+sudo apt-get install libdqrobotics*
+```
 
-Install `curl` and `jq`.
+- QTNetwork
+```sh
+sudo apt install libqt5network5
+```
+
+- Utilities for installation only (`curl` and `jq`)
 ```sh
 sudo apt update && sudo apt install curl jq
 ```
 
-Run the following to install or update.
+### Installation
+
+The supported strategy is to run the following to install or update.
 ```sh
 # Make a temporary directory
 mkdir -p ~/smart_arm_stack_installation
@@ -24,26 +35,20 @@ cd ~/smart_arm_stack_installation
 # Remove existing packages, if any
 sudo apt remove ros-noetic-sas* -y
 # Download files
-wget $(curl -sL https://api.github.com/repos/smartarmstack/smart_arm_stack/releases/latest | jq -r '.assets[].browser_download_url')
+wget $(curl -sL https://api.github.com/repos/smartarmstack/smart_arm_stack_lgpl/releases/latest | jq -r '.assets[].browser_download_url')
+wget $(curl -sL https://api.github.com/repos/smartarmstack/smart_arm_stack_research_only/releases/latest | jq -r '.assets[].browser_download_url')
 # Install packages
 sudo dpkg -i  ros-noetic-sas-*.deb
 # Remove temporary folder
+cd ~
 rm -r ~/smart_arm_stack_installation
 ```
 
 ## Dependencies
 
-1. [Ubuntu 20.04 Focal](https://releases.ubuntu.com/20.04/)
+1. [SmartArmStack (LGPL)](https://github.com/SmartArmStack/smart_arm_stack_lgpl)
 
-2. [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
-
-3. [DQ Robotics](https://dqrobotics.github.io/) Development Branch (***NOT RELEASE***)
-
-```sh
-sudo add-apt-repository ppa:dqrobotics-dev/development
-sudo apt-get update
-sudo apt-get install libdqrobotics*
-```
+2. [SmartArmStack (ResearchOnly)](https://github.com/SmartArmStack/smart_arm_stack_researchonly)
 
 ## Issues
 
