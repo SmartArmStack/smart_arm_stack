@@ -11,3 +11,5 @@ sudo dpkg -i  ros-noetic-sas-*.deb
 # Remove temporary folder
 cd ~
 rm -r ~/smart_arm_stack_installation
+# Remove itself
+rm -- "$0"
