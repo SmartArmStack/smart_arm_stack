@@ -29,8 +29,7 @@ sudo apt update && sudo apt install curl jq
 
 The supported strategy is to run the following to install or update.
 ```sh
-wget https://raw.githubusercontent.com/SmartArmStack/smart_arm_stack/main/install.sh
-sh install.sh
+wget https://raw.githubusercontent.com/SmartArmStack/smart_arm_stack/main/install.sh && sh install.sh
 ```
 
 ## Dependencies
