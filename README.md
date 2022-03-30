@@ -8,12 +8,17 @@ The current version of the packages are compatible with `ROS Noetic` in `Ubuntu 
 
 ### Dependencies
 
-- [DQRobotics](https://github.com/dqrobotics/cpp/)
+- [DQRobotics CPP](https://github.com/dqrobotics/cpp/)
 ```sh
 sudo add-apt-repository ppa:dqrobotics-dev/development
 sudo apt-get update
 sudo apt-get install libdqrobotics*
 ```
+
+- Python Dependencies
+  * [DQRobotics Python](https://github.com/dqrobotics/python/) `python3 -m pip install dqrobotics`
+  * Scipy `python3 -m pip install scipy`
+  * PyModBus  `python3 -m pip install pymodbus`
 
 - QTNetwork
 ```sh
