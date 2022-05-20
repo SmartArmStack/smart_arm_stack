@@ -8,6 +8,10 @@ The current version of the packages are compatible with `ROS Noetic` in `Ubuntu 
 
 ### Dependencies
 
+- Ubuntu 20.04
+
+- [Ros Noetic for Ubuntu 20.04](http://wiki.ros.org/noetic/Installation/Ubuntu)
+
 - [DQRobotics CPP](https://github.com/dqrobotics/cpp/)
 ```sh
 sudo add-apt-repository ppa:dqrobotics-dev/development
