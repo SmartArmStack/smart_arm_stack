@@ -34,11 +34,19 @@ sudo apt install libqt5network5
 sudo apt update && sudo apt install curl jq
 ```
 
-### Installation
+### Setting up the installer
 
-The supported strategy is to run the following to install or update.
+Do the following **ONLY ONCE**
 ```sh
-wget https://raw.githubusercontent.com/SmartArmStack/smart_arm_stack/main/install.sh && sh install.sh
+echo "alias sas-update='wget https://raw.githubusercontent.com/SmartArmStack/smart_arm_stack/main/install.sh && sh install.sh'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### Installing and updating
+
+Run
+```sh
+sas-update
 ```
 
 ## Dependencies
