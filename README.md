@@ -12,7 +12,12 @@ The current version of the packages are compatible with `ROS Noetic` in `Ubuntu 
 
 - [Ros Noetic for Ubuntu 20.04](http://wiki.ros.org/noetic/Installation/Ubuntu)
 
-- [DQRobotics CPP](https://github.com/dqrobotics/cpp/)
+The following packages suffice
+```sh
+sudo apt install ros-noetic-ros-base ros-noetic-pybind11-catkin -y
+```
+
+- [DQRobotics CPP](https://github.com/dqrobotics/cpp/) development branch, as follows
 ```sh
 sudo add-apt-repository ppa:dqrobotics-dev/development
 sudo apt-get update
